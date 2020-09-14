@@ -1,0 +1,43 @@
+footer {
+  color: $color-grey-light;
+  background-color: $color-blue-dark;
+  padding: 7rem 7rem 3rem 7rem;
+  @include clearfix();
+  @include mq("small-screen-3") {
+    padding: 9rem 2rem 3rem 2rem;
+  }
+  #logo-text-footer {
+    float: left;
+    width: 25%;
+    font-size: 4rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    @include mq("small-screen-3") {
+      margin-right: 6rem;
+      width: 20%;
+    }
+  }
+  #copyright {
+    float: left;
+    font-size: 1.2rem;
+    width: 75%;
+    @include mq("small-screen-3") {
+      width: 60%;
+    }
+    //nth-child 몇 번째 요소인지 지정가능
+    p:nth-child(1) {
+      margin-bottom: 2rem;
+      //개행을 단어단위로
+      word-break: break-all;
+      text-align: justify;
+      //단락 나누기
+      column-count: 3;
+      column-gap: 3rem;
+      column-rule-style: dashed;
+      column-rule-width: 1px;
+      column-rule-color: #888;
+      column-width: 1rem;
+    }
+  }
+}
